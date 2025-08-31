@@ -7,7 +7,7 @@ flex-direction: column;
 align-items: center;
 justify-content: space-evenly;
 padding: 20px;
-height: 100vh;
+min-height: 100vh;
 `;
 
 export const Form = styled.form`
@@ -35,7 +35,7 @@ span {
 
 export const Input = styled.input`
 border-radius: 10px;
-    color:  ${(props) => props.theme.lightGray};
+    color:  ${(props) => props.theme.midnightBlue};
 border: 1px solid ;
 background-color: ${(props) => props.theme.white};
 padding: 12px 20px;
