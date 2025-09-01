@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import api from '../../services/api';
 
 import Trash from '../../assets/trash.svg';
 import DefaultButton from '../../components/Button';
@@ -13,6 +15,16 @@ import {
 } from './styles';
 
 function ListUsers() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    async function getUsers() {
+      const { data } = await api.get('/usuarios');
+      setUsers(data);
+    }
+    getUsers();
+    console.log(users);
+  }, []);
+
   const navigate = useNavigate();
 
   return (

@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../Components/Button/styles';
 import MaintTitle from '../../Components/Title';
 import TopBackground from '../../Components/TopBackground';
+
+
 import api from '../../services/api';
 import { Container, ContainerInputs, Form, Input, InputLabel } from './styles';
 
@@ -20,7 +22,7 @@ function Home() {
       age: parseInt(inputAge.current.value),
       email: inputEmail.current.value,
     });
-    navigate('/lista-de-usuarios')
+    navigate('/lista-de-usuarios');
   }
 
   return (
